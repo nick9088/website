@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="home - nick909">
+	<main class="animate__animated animate__fadeIn">
+		<h1 class="font-bold text-3xl py-3">Hi 👋</h1>
+		<p>i am nick909, a student and developer in Milan, Italy 🇮🇹</p>
+		<h1 class="font-bold text-3xl py-3">What i like/dislike</h1>
+		<p>i like a lot of things, such as:</p>
+		<ul class="favlist">
+			<li>IT and tech in general 💻</li>
+			<li>football ⚽ (favorite teams are: AC Milan, Real Madrid and SSC Napoli)</li>
+			<li>taking pictures 📸</li>
+			<li>hanging out with friends</li>
+			<li>collecting game consoles and emulating them (legally 😏)</li>
+		</ul>
+		<p>what i don't like is anything that's not in the list lmao</p>
+		<h1 class="font-bold text-3xl py-3">Coming soon 👀</h1>
+		<p>i'm planning to add a blog section and a history page so you can learn the evolution of this website and the most painful attempts it took me to perfection it (i need time y'all 🥲)</p>
+	</main>
+</Layout>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+	body {
+		@apply flex h-screen;
+		padding: 0 1.5rem 1.5rem 1.5rem;
+		font-family: "Unbounded", sans-serif;
+	}
+
+	.underline-2 {
+		border-bottom: 1px solid;
+	}
+
+	.favlist {
+		list-style: inside;
+	}
+</style>

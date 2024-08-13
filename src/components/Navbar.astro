@@ -1,0 +1,46 @@
+<nav class="sticky py-5">
+    <h1 class="text-3xl font-bold">nick909</h1>
+    <span class="flex" id="randomtext">//missingno</span>
+    <ul class="flex justify-start py-2">
+        <li class="mr-6">
+            <a
+                href="/"
+                class="relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-mauve"
+                >home</a
+            >
+        </li>
+        <!-- <li class="mr-6">
+            <a
+                href="/blog"
+                class="relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-mauve"
+                >blog</a
+            >
+        </li>
+        <li class="mr-6">
+            <a
+                href="/history"
+                class="relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-mauve"
+                >history</a
+            >
+        </li>-->
+        <li class="mr-6">
+            <a
+                href="/contacts"
+                class="relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-mauve"
+                >contacts</a
+            >
+        </li>
+    </ul>
+</nav>
+<script>
+    let spanElement = document.getElementById("randomtext");
+    let phrases = [
+        "//wow, refreshing!",
+        "//javascript is awesome!",
+        "//took me two days for this but i love it",
+        "//i 🩷 astro",
+    ];
+
+    let randomIndex = Math.floor(Math.random() * phrases.length);
+    spanElement.textContent = phrases[randomIndex];
+</script>
