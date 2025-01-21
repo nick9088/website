@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="projects - nick909">
+	<main class="animate__animated animate__fadeIn">
+		<h1 class="font-bold text-3xl py-2">projects</h1>
+		<p class="py-2">here are some of the projects i'm working on:</p>
+		<ul class="favlist">
+			<li><a class="font-bold" href="https://spacetv.nick909.dev">SpaceTV: my self-hosted radio</a></li>
+			<li>more coming soon...</li>
+		</ul>
+        <p class="py-2 font-bold">unfortunately, i'm currently busy with school so i can't work on new projects but just as a spoiler, i'm gonna make a ZX Spectrum emulator with some classic games soon 👀</p>
+	</main>
+</Layout>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+	body {
+		@apply flex h-screen;
+		padding: 0 1.5rem 1.5rem 1.5rem;
+		font-family: "Unbounded", sans-serif;
+	}
+
+	.underline-2 {
+		border-bottom: 1px solid;
+	}
+
+	.favlist {
+		list-style: inside;
+	}
+</style>
