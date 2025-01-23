@@ -6,11 +6,9 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
 <Layout title="blog - nick909">
 	<main class="animate__animated animate__fadeIn">
 		<h1 class="font-bold text-3xl py-2">blog</h1>
-        <div class="py-3">
-            <ul class="favlist">
+            <ul class="favlist py-3">
                 {allPosts.map((post: any) => <li><a href={post.url} class="font-bold relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-lavender">{post.frontmatter.title}</a></li>)}
             </ul>
-        </div>
 	</main>
 </Layout>
 
