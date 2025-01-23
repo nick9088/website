@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const { frontmatter } = Astro.props;
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import 'animate.css';
@@ -17,12 +18,20 @@ import 'animate.css';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{frontmatter.title} - nick909</title>
 	</head>
 	<body>
 		<div class='container'>
 			<Navbar />
-			<slot />
+			<div class="postdetails py-3 animate__animated animate__fadeIn">
+				<h1 class="font-bold text-3xl ">{frontmatter.title}</h1>
+				<p class="text-2xl">by {frontmatter.author}</p>
+				<p class="text-2xs">Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
+			</div>
+
+			<div class="py-3 animate__animated animate__fadeIn">
+				<slot />
+			</div>
 		</div>
 		<Footer />
 	</body>
@@ -38,7 +47,7 @@ import 'animate.css';
 		body > div:first-child,
 		div#__next,
 		div#__next > div {
-			@apply h-full bg-base text-mauve;
+			@apply h-full text-text;
 			font-family: "Unbounded", sans-serif;
 		}
 	}
@@ -55,9 +64,15 @@ import 'animate.css';
 		}
 	}
 
-	@media (max-width: 768px) {
-		footer {
-			width: 100%;
-		}
+	.icon-link .icon {
+		font-size: 24px; 
+	}
+
+	.postdetails {
+		border-bottom: 3px solid;
+	}
+
+	body {
+		background-image: url('/public/back.jpg');
 	}
 </style>
